@@ -549,6 +549,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	scissorRect.top = 0;
 	scissorRect.bottom = kClientHeight;
 
+	Vector4 Tranform = { 1.0f,1.0f,1.0f,1.0f };
+
 	MSG msg{};
 	//ウィンドウの:×ボタンが押されるまでループ
 	while (msg.message != WM_QUIT) {
@@ -668,7 +670,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	useAdapter->Release();
 	dxgiFactory->Release();
 	materialResource->Release();
-
+	
 	vertexResource->Release();
 	graphicsPipelineState->Release();
 	signatureBlob->Release();
