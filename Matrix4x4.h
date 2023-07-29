@@ -19,3 +19,5 @@ Matrix4x4 MakeAffineMatrix(const Vector3& scale, const Vector3 rotate, const Vec
 Matrix4x4 MakePerspectiveFovMatrix(float fovY, float aspectRatio, float nearClip, float farClip);
 
 Matrix4x4 Inverse(Matrix4x4& m);
+
+Matrix4x4 MakeOrthographicMatrix(float left, float top, float right, float bottom, float nearClip, float farClip);
