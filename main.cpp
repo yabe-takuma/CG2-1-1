@@ -982,27 +982,27 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				instancingData[index].WVP = worldViewProjectionMatrix;
 				instancingData[index].World = worldMatrix;
 			}
-
+			*materialData = Vector4(inputfloat3[0], inputfloat3[1], inputfloat3[2], 1.0f);
 			//ImGui::ShowDemoWindow();
-			ImGui::Begin("Window");
-			
+			//ImGui::Begin("Window");
+			//
 
 		
-			//ImGui::SliderFloat3("color",inputfloat3, 0.0f, 1.0f);
-			ImGui::DragFloat2("taranslate", &vertexData[3].texcoord.x, 0.01f);
-			ImGui::DragFloat2("rotate", &vertexData[4].texcoord.x, 0.01f);
-			ImGui::DragFloat2("scale", &vertexData[5].texcoord.x, 0.01f);
-			ImGui::DragFloat3("taranslate", &transform.translate.x, 0.01f);
-			ImGui::DragFloat3("rotate", &transform.rotate.x, 0.01f);
-			ImGui::DragFloat3("scale", &transform.scale.x, 0.01f);
-			*materialData = Vector4(inputfloat3[0], inputfloat3[1], inputfloat3[2], 1.0f);
-			ImGui::Checkbox("useMonsterBall", &useMonsterBall);
-			ImGui::DragFloat4("DirectionalLight.color", &directionalLightData->color.x, 0.01f);
-			ImGui::DragFloat3("DirectionalLight.direction", &directionalLightData->direction.x, 0.01f);
-			ImGui::DragFloat("DirectionalLight.intensity", &directionalLightData->intensity, 0.01f);
-			//ImGui::SliderFloat4("color", &materialDataSprite->color.x, 0.0f,1.0f);
-			ImGui::ColorEdit4("Intenity", &materialDataSprite->color.x, 1.0f);
-			ImGui::End();
+			////ImGui::SliderFloat3("color",inputfloat3, 0.0f, 1.0f);
+			//ImGui::DragFloat2("taranslate", &vertexData[3].texcoord.x, 0.01f);
+			//ImGui::DragFloat2("rotate", &vertexData[4].texcoord.x, 0.01f);
+			//ImGui::DragFloat2("scale", &vertexData[5].texcoord.x, 0.01f);
+			//ImGui::DragFloat3("taranslate", &transform.translate.x, 0.01f);
+			//ImGui::DragFloat3("rotate", &transform.rotate.x, 0.01f);
+			//ImGui::DragFloat3("scale", &transform.scale.x, 0.01f);
+			//
+			//ImGui::Checkbox("useMonsterBall", &useMonsterBall);
+			//ImGui::DragFloat4("DirectionalLight.color", &directionalLightData->color.x, 0.01f);
+			//ImGui::DragFloat3("DirectionalLight.direction", &directionalLightData->direction.x, 0.01f);
+			//ImGui::DragFloat("DirectionalLight.intensity", &directionalLightData->intensity, 0.01f);
+			////ImGui::SliderFloat4("color", &materialDataSprite->color.x, 0.0f,1.0f);
+			//ImGui::ColorEdit4("Intenity", &materialDataSprite->color.x, 1.0f);
+			//ImGui::End();
 			ImGui::Render();
 
 			//これから書き込むバックバッファのインデックスを取得
