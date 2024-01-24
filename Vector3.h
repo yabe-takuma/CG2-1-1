@@ -6,3 +6,7 @@ struct Vector3
 	float y;
 	float z;
 };
+
+struct CameraForGPU {
+	Vector3 worldPosition;
+};
